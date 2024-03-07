@@ -293,7 +293,8 @@ function getWeekNumberByDate(date) {
  */
 function getNextFridayThe13th(date) {
   let tempDate = new Date(date).getTime();
-  while (true) {
+  const condition = true;
+  while (condition) {
     tempDate += 24 * 60 * 60 * 1000;
     if (
       new Date(tempDate).getDay() === 5 &&
@@ -302,6 +303,7 @@ function getNextFridayThe13th(date) {
       return new Date(tempDate);
     }
   }
+  return new Date(tempDate);
 }
 
 /**
